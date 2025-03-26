@@ -1,0 +1,35 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js --ignore tests",
+    "client": "cd client && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "npm install --prefix client --legacy-peer-deps && npm run build --prefix client",
+    "heroku-postbuild": "npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1692.0",
+    "body-parser": "^1.20.3",
+    "concurrently": "3.5.0",
+    "cookie-session": "^2.1.0",
+    "express": "^4.21.2",
+    "jest": "^29.7.0",
+    "migrate-mongoose": "^0.1.0",
+    "mongoose": "^8.13.0",
+    "nodemon": "^1.19.4",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "2.0.0",
+    "path-parser": "2.0.2",
+    "puppeteer": "^1.20.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "redis": "^4.7.0",
+    "uuid": "3.2.1"
+  }
+}
